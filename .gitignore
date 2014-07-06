@@ -2,3 +2,5 @@
 Visual Micro/.DeltaCE_Library.vsarduino.h
 Visual Micro/Compile.vmps.xml
 Visual Micro/Configuration.Debug.vmps.xml
+*.atsln
+*.atsuo
