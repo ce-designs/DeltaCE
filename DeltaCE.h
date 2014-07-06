@@ -18,7 +18,7 @@
 
 
 #define MIN_ATTENUATION 0		// the lower possible value for attenuation (0dB Attenuation == no attuenation)	
-#define PULSETIME 20			// the time in milliseconds for how long the pulses are applied to the relays
+#define PULSETIME 50			// the time in milliseconds for how long the pulses are applied to the relays
 
 #define DEFAULT_ATTENUATION 100 // default volume at power up (100 == -50dB)
 #define DEFAULT_STEPSIZE 1		// this is actually double the value StepSize (1 == 0.5dB)

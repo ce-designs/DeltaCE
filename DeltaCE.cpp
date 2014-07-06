@@ -149,6 +149,9 @@ void DeltaCE::applySettings()
 	
 	// write value to PCF8574 no.1
 	setPcfPins(this->pcf8574Addr1, pcfVal);
+	
+	delay(PULSETIME);		// wait for the relays to attenuate
+	
 	// write the value with all bits flipped to PCF8574 no.2
 	setPcfPins(this->pcf8574Addr2, ~pcfVal);
 	
