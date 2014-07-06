@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map For DeltaCE
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DeltaCE	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+increaseVolume	KEYWORD2
+decreaseVolume	KEYWORD2
+getAttenuation	KEYWORD2
+setAttenuation	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
