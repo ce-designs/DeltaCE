@@ -28,18 +28,19 @@ void setup()
 // main loop
 void loop()
 {
-	// raise the volume by 10 steps
+	// raise the volume by 10 steps, one step per second
 	for (byte x = 0; x < 10; x++)
 	{
 		delta.increaseVolume();
+		delay(1000);
 	}
 	
-	// lower the volume by 10 steps
+	// lower the volume by 10 steps, one step per second
 	for (byte x = 0; x < 10; x++)
 	{
 		delta.decreaseVolume();
+		delay(1000);
 	}
-
 }
 
 
