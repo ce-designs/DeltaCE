@@ -5,7 +5,7 @@
 
 #define MAX_ATTENUATION 127.5	// max 127.5dB attuenation (other possible values are 255dB and 25.5dB)
 #define	MIN_STEP_SIZE 0.5		// the lowest possible step size for attuenation of the audio signal
-#define STEP_SIZE 0.5				// the desired step size (must be the same or a multiple of the minimum step size!)
+#define STEP_SIZE 0.5			// the desired step size (must be the same or a multiple of the minimum step size!)
 #define PCF8574_ADDR_1 0x20		// address of PCF8574 device no.1
 #define PCF8574_ADDR_2 0x21		// address of PCF8574 device no.2
 
