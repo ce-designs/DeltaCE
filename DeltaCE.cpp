@@ -1,8 +1,9 @@
 /* 
 * DeltaCE.cpp
 *
-* Created: 6-7-2014 11:34:34
-* Author: CE-Designs
+* Created:	6-7-2014 11:34:34
+* Author:	CE-Designs
+* Purpose:	For controlling a DeltaCE relay attenuator
 */
 
 #include "DeltaCE.h"
@@ -150,14 +151,19 @@ void DeltaCE::applySettings()
 	// write value to PCF8574 no.1
 	setPcfPins(this->pcf8574Addr1, pcfVal);
 	
-	delay(PULSETIME);		// wait for the relays to attenuate
+	// wait to be sure that the relays are actuated
+	delay(PULSE_TIME);
 	
+	// set all pins of both PCF8574 no.1 and no.2 low
+	setAllPcfpinsLOW();
+
 	// write the value with all bits flipped to PCF8574 no.2
-	setPcfPins(this->pcf8574Addr2, ~pcfVal);
+	setPcfPins(this->pcf8574Addr2, (byte)~pcfVal);
 	
-	delay(PULSETIME);		// wait for the relays to attenuate
+	// wait again to be sure that the relays are actuated
+	delay(PULSE_TIME);		// wait for the relays to attenuate
 	
-	setAllPcfpinsLOW();		// set all pins of both PCF8574 no.1 and no.2 low	
+	setAllPcfpinsLOW();		// set all pins of both PCF8574 no.1 and no.2 low
 }
 
 // sets all pins of both PCF8574 no.1 and no.2 low
